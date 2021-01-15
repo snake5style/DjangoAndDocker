@@ -1,0 +1,4 @@
+{
+    "python.pythonPath": "/home/jamesbond/django_docker/env/bin/python3.8",
+    "git.ignoreLimitWarning": true
+}

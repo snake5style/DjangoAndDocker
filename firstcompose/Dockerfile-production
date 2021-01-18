@@ -54,8 +54,6 @@ COPY --from=builder /usr/src/firstcompose/wheels /wheels
 COPY --from=builder /usr/src/firstcompose/requirements.txt .
 RUN pip install --no-cache /wheels/*
 
-# copy entrypoint-production.sh
-COPY ./entrypoint-production.sh $bond_HOME
 
 # copy project
 COPY . $bond_HOME
@@ -72,5 +70,3 @@ RUN chown -R bond:bond $bond_HOME
 # change to the app user
 USER bond
 
-# run entrypoint.prod.sh
-ENTRYPOINT ["/home/bond/web/entrypoint-production.sh"]

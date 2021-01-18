@@ -1,0 +1,9 @@
+location /staticfiles/ {
+  alias /home/bond/web/staticfiles/;
+  add_header Access-Control-Allow-Origin *;
+}
+
+location /mediafiles/ {
+  alias /home/bond/web/mediafiles/;
+  add_header Access-Control-Allow-Origin *;
+}
